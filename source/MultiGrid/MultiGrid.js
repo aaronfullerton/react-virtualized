@@ -140,7 +140,7 @@ export default class MultiGrid extends PureComponent {
 
     this._leftGridWidth = null;
     this._topGridHeight = null;
-    this._maybeCalculateCachedStyles(null, this.props, null, this.state);
+    this._maybeCalculateCachedStyles(null, this.props);
   }
 
   componentDidMount() {
@@ -173,7 +173,7 @@ export default class MultiGrid extends PureComponent {
       fixedRowCount,
     } = this.props;
 
-    this._maybeCalculateCachedStyles(null, this.props, null, this.state);
+    this._maybeCalculateCachedStyles(null, this.props);
 
     if (deferredMeasurementCache) {
       this._deferredMeasurementCacheBottomLeftGrid =
@@ -246,9 +246,7 @@ export default class MultiGrid extends PureComponent {
 
     this._maybeCalculateCachedStyles(
       this.props,
-      nextProps,
-      this.state,
-      nextState,
+      nextProps
     );
   }
 
